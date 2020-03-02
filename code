@@ -1,0 +1,13 @@
+var randomTexts=["Hi","Hello","Please reply me"];
+window.InputEvent = window.Event || window.InputEvent;
+var event = new InputEvent('input', {bubbles: true});
+var textbox = document.getElementsByClassName("_3u328")[0];
+setInterval(function(){ textbox.innerHTML = randomTexts[Math.floor((Math.random() * randomTexts.length) + 0)];
+textbox.dispatchEvent(event);
+document.getElementsByClassName("_3M-N-")[0].click() ; }, 1000);
+
+
+/*Tips-Tips
+
+To Change message :Using this code will sent messages from randomText string array. Each message will be selected randomly from the array and sent to the contact. You can use your own strings or single string inside this.
+Change time between each message:Using this code, messages will be sent at 1 message per second (1000 milliseconds). To change this you can change the 1000 milliseconds given for setInterval function at line 7 to any milliseconds rate you want.*/
